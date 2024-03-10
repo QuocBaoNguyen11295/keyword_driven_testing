@@ -9,10 +9,7 @@ describe('My Login application', () => {
         var password = element.password
         var result = element.result
         it(`should login with ${username} and ${password}`, async () => {
-            await browser.type_username(username)
-            await browser.type_password(password)
-            await browser.click_on_login_button()
-            await browser.check_login_result(result)
+            await browser.login(username, password, result)
         })
     });
 })

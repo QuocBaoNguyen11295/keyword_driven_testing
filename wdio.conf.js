@@ -208,6 +208,13 @@ exports.config = {
             await expect($('#flash')).toBeExisting()
             await expect($('#flash')).toHaveText(expect.stringContaining(`${result}`))
         })
+
+        browser.addCommand('login', async (username, password, result) => {
+            await browser.type_username(username)
+            await browser.type_password(password)
+            await browser.click_on_login_button()
+            await browser.check_login_result(result)
+        })
     },
     /**
      * Runs before a WebdriverIO command gets executed.
