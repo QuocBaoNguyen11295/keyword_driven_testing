@@ -1,4 +1,4 @@
-const { expect, browser, $ } = require('@wdio/globals')
+const { browser } = require('@wdio/globals')
 const accountData = require('../../data/account.json')
 describe('My Login application', () => {
     beforeEach(async () => {
